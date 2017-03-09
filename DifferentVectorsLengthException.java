@@ -1,19 +1,17 @@
 public class DifferentVectorsLengthException extends Exception{
-
+    Vector a,b;
     public DifferentVectorsLengthException(){
-        System.out.println("Vectors not equal.");
-        System.out.println("Please try another valid vector.");
-    }
-
-    public DifferentVectorsLengthException(String message){
-        System.out.println(message);
-        System.out.println("Please try another valid vector.");
-    }
+            Vector a,b = new Vector();
+        }
+    
 
     public DifferentVectorsLengthException(Vector a, Vector b){
-        System.out.println("Vectors have different lengths.");
-        a.print();
-        b.print();
-        System.out.println("Please try another valid vector.");
+        this.a = new Vector(a);
+        this.b = new Vector(b);
+    }
+
+    public String toString()
+    {
+        return a.toString()+","+b.toString();
     }
 }
